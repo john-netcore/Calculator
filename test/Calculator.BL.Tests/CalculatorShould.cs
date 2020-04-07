@@ -5,10 +5,11 @@ namespace Calculator.BL.Tests
 {
     public class CalculatorShould
     {
-        [Fact]
-        public void Test1()
-        {
+        private readonly Calculator _sut;
 
+        public CalculatorShould()
+        {
+            _sut = new Calculator();
         }
     }
 }
