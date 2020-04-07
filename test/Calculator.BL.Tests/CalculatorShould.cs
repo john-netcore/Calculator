@@ -3,7 +3,7 @@ using Xunit;
 
 namespace Calculator.BL.Tests
 {
-    public class UnitTest1
+    public class CalculatorShould
     {
         [Fact]
         public void Test1()
