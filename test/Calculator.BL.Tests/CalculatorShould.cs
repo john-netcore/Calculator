@@ -28,5 +28,12 @@ namespace Calculator.BL.Tests
             var ex = Assert.Throws<ArgumentOutOfRangeException>(() => _sut.Calculate(1, 1, "_"));
             _output.WriteLine(ex.ToString());
         }
+
+        [Fact]
+        public void ThrowAnExceptionWhenOperatorIsNull()
+        {
+            var ex = Assert.Throws<ArgumentNullException>(() => _sut.Calculate(1, 1, null));
+            _output.WriteLine(ex.ToString());
+        }
     }
 }
