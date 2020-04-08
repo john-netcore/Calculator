@@ -17,7 +17,7 @@ namespace Calculator.BL.Tests
 
 
         [Fact]
-        public void ThrowAnExceptionWhenDividingByZero()
+        public void ThrowAnExceptionOnDivisionByZero()
         {
             var ex = Assert.Throws<ArithmeticException>(() => _sut.Calculate(10, 0, "/"));
             _output.WriteLine(ex.ToString());
@@ -26,7 +26,7 @@ namespace Calculator.BL.Tests
         [Fact]
         public void ThrowAnExceptionWhenWrongOperator()
         {
-            var ex = Assert.Throws<ArgumentOutOfRangeException>(() => _sut.Calculate(1, 1, "_"));
+            var ex = Assert.Throws<CalculationOperationNotSupportedException>(() => _sut.Calculate(1, 1, "_"));
             _output.WriteLine(ex.ToString());
         }
 
