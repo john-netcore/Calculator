@@ -23,7 +23,7 @@ namespace Calculator.BL
             }
             else
             {
-                throw new ArgumentOutOfRangeException(nameof(operation), "The mathematical operator is not supported.");
+                throw new CalculationOperationNotSupportedException();
             }
         }
 
