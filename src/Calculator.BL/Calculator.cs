@@ -17,7 +17,7 @@ namespace Calculator.BL
                 catch (ArithmeticException ex)
                 {
                     //Wrapping an exception.
-                    throw new CalculationException(ex);
+                    throw new CalculationException("An error occurred during division", ex);
                 }
 
             }
