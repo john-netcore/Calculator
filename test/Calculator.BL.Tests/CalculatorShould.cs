@@ -25,7 +25,8 @@ namespace Calculator.BL.Tests
         [Fact]
         public void ThrowAnExceptionWhenWrongOperator()
         {
-            Assert.Throws<ArgumentOutOfRangeException>(() => _sut.Calculate(1, 1, "_"));
+            var ex = Assert.Throws<ArgumentOutOfRangeException>(() => _sut.Calculate(1, 1, "_"));
+            _output.WriteLine(ex.ToString());
         }
     }
 }
