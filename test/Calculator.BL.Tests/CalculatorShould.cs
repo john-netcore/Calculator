@@ -16,8 +16,6 @@ namespace Calculator.BL.Tests
         [Fact]
         public void ThrowAnExceptionWhenDividingByZero()
         {
-            // var actual = _sut.Calculate(10, 0, "/");
-
             Assert.Throws<ArgumentOutOfRangeException>(() => _sut.Calculate(10, 0, "/"));
         }
     }
