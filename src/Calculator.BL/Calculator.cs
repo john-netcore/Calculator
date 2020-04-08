@@ -10,7 +10,16 @@ namespace Calculator.BL
 
             if (nonNullOperation == "/")
             {
-                return Divide(number1, number2);
+                try
+                {
+                    return Divide(number1, number2);
+                }
+                catch (DivideByZeroException ex)
+                {
+                    //Wrapping an exception.
+                    throw new ArithmeticException("An error occurred during calculation.", ex);
+                }
+
             }
             else
             {
