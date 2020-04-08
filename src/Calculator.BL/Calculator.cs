@@ -14,10 +14,10 @@ namespace Calculator.BL
                 {
                     return Divide(number1, number2);
                 }
-                catch (DivideByZeroException ex)
+                catch (ArithmeticException ex)
                 {
                     //Wrapping an exception.
-                    throw new ArithmeticException("An error occurred during calculation.", ex);
+                    throw new CalculationException(ex);
                 }
 
             }
