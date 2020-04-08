@@ -27,6 +27,7 @@ namespace Calculator.BL.Tests
         public void ThrowAnExceptionWhenWrongOperator()
         {
             var ex = Assert.Throws<CalculationOperationNotSupportedException>(() => _sut.Calculate(1, 1, "_"));
+            Assert.Equal("_", ex.Operation);
             _output.WriteLine(ex.ToString());
         }
 
