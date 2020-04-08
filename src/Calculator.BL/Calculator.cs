@@ -23,7 +23,7 @@ namespace Calculator.BL
             }
             else
             {
-                throw new CalculationOperationNotSupportedException();
+                throw new CalculationOperationNotSupportedException(operation);
             }
         }
 
