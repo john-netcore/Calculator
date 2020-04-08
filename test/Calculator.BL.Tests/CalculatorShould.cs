@@ -19,5 +19,10 @@ namespace Calculator.BL.Tests
             Assert.Throws<DivideByZeroException>(() => _sut.Calculate(10, 0, "/"));
         }
 
+        [Fact]
+        public void ThrowAnExceptionWhenWrongOperator()
+        {
+            Assert.Throws<ArgumentOutOfRangeException>(() => _sut.Calculate(1, 1, "_"));
+        }
     }
 }
