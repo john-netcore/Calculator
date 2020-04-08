@@ -1,14 +1,17 @@
 using System;
 using Xunit;
+using Xunit.Abstractions;
 
 namespace Calculator.BL.Tests
 {
     public class CalculatorShould
     {
+        private readonly ITestOutputHelper _output;
         private readonly Calculator _sut;
 
-        public CalculatorShould()
+        public CalculatorShould(ITestOutputHelper output)
         {
+            _output = output;
             _sut = new Calculator();
         }
 
