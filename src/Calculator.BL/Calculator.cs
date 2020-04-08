@@ -12,8 +12,7 @@ namespace Calculator.BL
             }
             else
             {
-                System.Console.WriteLine("Unknown operation");
-                return 0;
+                throw new ArgumentOutOfRangeException(nameof(operation), "The mathematical operator is not supported.");
             }
         }
 
