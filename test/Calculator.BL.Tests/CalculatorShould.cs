@@ -19,7 +19,7 @@ namespace Calculator.BL.Tests
         [Fact]
         public void ThrowAnExceptionOnDivisionByZero()
         {
-            var ex = Assert.Throws<ArithmeticException>(() => _sut.Calculate(10, 0, "/"));
+            var ex = Assert.Throws<CalculationException>(() => _sut.Calculate(10, 0, "/"));
             _output.WriteLine(ex.ToString());
         }
 
